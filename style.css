@@ -1,16 +1,53 @@
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Martian Mono', monospace;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    margin-top: 25px;
+    width: 100%;
+}
+
+header .myname{
+    margin-left: 20px;
+    font-weight: 700;
 }
 
 .navbar {
-    bottom: 0;
+    display: flex;
+    bottom: 20px;
     width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.menubar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    width: fit-content;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
 }
 
 .section {
@@ -22,7 +59,6 @@ body {
 }
 
 .fixed{
-    display: flex;
     position: fixed;
 }
 
@@ -36,4 +72,69 @@ body {
 
 .bg-black{
     background-color: #2A2A2A;
+}
+
+.active{
+    display: block;
+}
+
+.inactive{
+    display: none;
+}
+
+.section-names{
+    display: flex;
+    width: auto;
+    height: fit-content;
+    background-color: #8312D3;
+    padding: 0 30px 0 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.section-names p{
+    font-weight: 700;
+}
+
+.title-welcome{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 10vh;
+    width: 90%;
+    height: 15vh;
+    margin: auto 0;
+    font-weight: 700;
+}
+
+.title-welcome .boxquad{
+    display: flex;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #F0BA00;
+    z-index: 1;
+    left: 10px;
+}
+
+.title-welcome span{
+    z-index: 2;
+    font-size: 48px;
+    position: absolute;
+    left: 28px;
+}
+
+.first-line{
+    z-index: 2;
+    position: absolute;
+    margin-top: 30px;
+    font-size: 16px;
+}
+.second-line{
+    z-index: 2;
+    position: absolute;
+    margin-bottom: 20px;
+    top: 15px;
 }
