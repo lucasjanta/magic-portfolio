@@ -6,11 +6,13 @@ On this website, I share my projects, skills, and information about myself. Feel
 
 ## Roadmap
 - [x] Figma Design
-- [ ] HTML + CSS Page 1
+- [x] HTML + CSS Page 1
 - [ ] HTML + CSS Page 2
 - [ ] HTML + CSS Page 3
 - [ ] HTML + CSS Page 4
 - [ ] All Javascript
+- [ ] Desktop Version
+- [ ] Final Touches
 
 ## What I Used?
 - Figma
