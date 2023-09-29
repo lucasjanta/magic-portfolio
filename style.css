@@ -33,22 +33,26 @@ header .myname{
 
 .menubar {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: bisque;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.3);
     width: fit-content;
+    padding: 10px;
+    border-radius: 50px;
+    
 }
 
-nav ul{
+.menubar ul{
     display: flex;
     list-style-type: none;
+    align-items: center;
     justify-content: space-between;
+    width: min-content;
+    margin: 0;
+    padding: 0 5px;
+    gap: 25px;
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: black;
-}
+
 
 .section {
     height: 100vh;
@@ -95,6 +99,7 @@ nav ul li a{
 
 .section-names p{
     font-weight: 700;
+    color: white;
 }
 
 .title-welcome{
@@ -142,7 +147,7 @@ nav ul li a{
     justify-content: center;
     align-items: center;
     width: 200%;
-    height: 10vh;
+    height: 11vh;
     margin: 5rem auto 0;
     background-color: #2A2A2A;
     transform: rotate(-4deg) translateX(-50%);
@@ -180,7 +185,7 @@ nav ul li a{
     justify-content: center;
     align-items: center;
     width: 200%;
-    height: 10vh;
+    height: 11vh;
     margin: 0 auto;
     background-color: #2A2A2A;
     transform: rotate(4deg) translateX(-50%);
