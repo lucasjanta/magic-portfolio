@@ -53,13 +53,13 @@ nav ul li a{
 .section {
     height: 100vh;
     width: 100%;
-    padding: 20px;
-    text-align: center;
-    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
 }
 
 .fixed{
     position: fixed;
+    z-index: 100;
 }
 
 .right{
@@ -83,6 +83,7 @@ nav ul li a{
 }
 
 .section-names{
+    z-index: 10;
     display: flex;
     width: auto;
     height: fit-content;
@@ -100,41 +101,147 @@ nav ul li a{
     display: flex;
     position: relative;
     flex-direction: column;
-    justify-content: center;
+    line-height: 2rem;
     align-items: center;
     top: 10vh;
-    width: 90%;
+    width: 100%;
     height: 15vh;
-    margin: auto 0;
-    font-weight: 700;
+    margin: 0 auto;
+    
+    text-wrap: nowrap;
 }
 
-.title-welcome .boxquad{
+.title-text{
+    position: relative;
+    font-weight: 700;
+    z-index: 5;
+}
+
+.title-box{
     display: flex;
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: #F0BA00;
-    z-index: 1;
-    left: 10px;
+    top: 20px;
+    left: -8px;
+    z-index: -2;
+    transform: rotate(35deg);
 }
 
-.title-welcome span{
-    z-index: 2;
-    font-size: 48px;
-    position: absolute;
-    left: 28px;
+.first-line span{
+    font-size: 3rem;
 }
 
 .first-line{
-    z-index: 2;
-    position: absolute;
-    margin-top: 30px;
-    font-size: 16px;
+    font-size: 5vw;
 }
-.second-line{
-    z-index: 2;
-    position: absolute;
-    margin-bottom: 20px;
-    top: 15px;
+
+.creativity-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200%;
+    height: 10vh;
+    margin: 5rem auto 0;
+    background-color: #2A2A2A;
+    transform: rotate(-4deg) translateX(-50%);
+}
+
+.creativity-text{
+    text-wrap: nowrap;
+    z-index: 5;
+    color: #8312D3;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.meets-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    height: fit-content;
+    width: fit-content;
+    background-color: #2A2A2A;
+    border-radius: 40px;
+}
+
+.meets-text{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 25px;
+}
+
+.tech-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200%;
+    height: 10vh;
+    margin: 0 auto;
+    background-color: #2A2A2A;
+    transform: rotate(4deg) translateX(-50%);
+}
+
+.tech-text{
+    text-wrap: nowrap;
+    z-index: 5;
+    color: #F0BA00;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.text-home{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    
+    margin: auto;
+}
+
+.text-home p{
+    font-size: 2.2vh;
+    font-weight: 700;
+    padding: 0 10px;
+}
+
+.text-home .job-title-span{
+    color: #8312D3;
+}
+
+.text-home .yellow-span{
+    color: #F0BA00;
+}
+
+.buttondiv1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:auto;
+    bottom: 50px;
+    margin: 0 auto 30px;
+}
+
+.buttondiv1 button{
+    background-color: #F0BA00;
+    color: black;
+    border-radius: 20px;
+    padding: 1rem;
+    font-family: 'Martian Mono', monospace;
+    font-weight: 700;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.buttondiv1 button img{
+    width: 20px;
 }
