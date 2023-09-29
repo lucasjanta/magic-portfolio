@@ -1,5 +1,5 @@
 # magic-portfolio
-This is the repository for my personal portfolio website. You can access the site at [no link yet](https://www.google.com)
+This is the repository for my personal portfolio website. You can access the site at [Github Pages](lucasjanta.github.io/magic-portfolio/)
 
 ## Overview
 On this website, I share my projects, skills, and information about myself. Feel free to explore!
