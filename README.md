@@ -32,4 +32,8 @@ At first, I created a figma file to develop the design of the website. All the d
 ### Pages
 ![image](https://github.com/lucasjanta/magic-portfolio/assets/6317729/4d40331f-2526-480e-9bf3-1b55ed0782eb)
 
-## First Section HTML + CSS
+## HTML + CSS
+### First Section
+Brief introduction and a button that goes directly to "Get in Touch" Section
+![image](https://github.com/lucasjanta/magic-portfolio/assets/6317729/884d4e90-1a93-48a1-bf93-31be1f42a66d)
+
