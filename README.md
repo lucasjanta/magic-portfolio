@@ -28,7 +28,7 @@ If you want to run this website locally, follow these steps:
 - CSS
 
 ## Figma Project 
-At first, I created a figma file to develop the design of the website. All the design was made using Figma and Illustrator.
+All the design was made using Figma and Illustrator.
 ### Pages
 ![image](https://github.com/lucasjanta/magic-portfolio/assets/6317729/4d40331f-2526-480e-9bf3-1b55ed0782eb)
 
