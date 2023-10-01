@@ -35,6 +35,6 @@ At first, I created a figma file to develop the design of the website. All the d
 ## HTML + CSS
 ### First Section
 Brief introduction and a button that goes directly to "Get in Touch" Section
-
+<br/>
 ![image](https://github.com/lucasjanta/magic-portfolio/assets/6317729/884d4e90-1a93-48a1-bf93-31be1f42a66d)
 
