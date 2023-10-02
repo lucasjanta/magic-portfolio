@@ -7,7 +7,7 @@ On this website, I share my projects, skills, and information about myself. Feel
 ## Roadmap
 - [x] Figma Design
 - [x] HTML + CSS Page 1
-- [ ] HTML + CSS Page 2
+- [x] HTML + CSS Page 2
 - [ ] HTML + CSS Page 3
 - [ ] HTML + CSS Page 4
 - [ ] All Javascript
