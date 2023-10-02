@@ -38,4 +38,9 @@ Brief introduction and a button that goes directly to "Get in Touch" Section
 <br/>
 ![image](https://github.com/lucasjanta/magic-portfolio/assets/6317729/6aa3d25c-5090-4b82-acae-4578cb77f16a)
 
+### Second Section
+A static first view of a mini-game that will show the projects in my portfolio
+<br/>
+![image](https://github.com/lucasjanta/magic-portfolio/assets/6317729/f395c3b2-2d4a-4047-9157-86ca75f70448)
+
 
