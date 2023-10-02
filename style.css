@@ -259,14 +259,13 @@ header .myname{
     width: 100%;
     font-family: 'Young Serif', serif;
     font-weight: 700;
-    
+    height: 20vh;
 }
 
 .textdiv2{
     position: relative;
     display: flex;
     width: 100%;
-    height: 22vh;
     align-items: center;
     justify-content: center;
 }
@@ -304,8 +303,8 @@ header .myname{
 }
 
 .container{
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     margin: auto;
     border-radius: 8px;
     perspective: 90%; 
@@ -339,6 +338,9 @@ header .myname{
 
 .front{
     background: #8312D3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .title-and-suit{
@@ -440,6 +442,7 @@ header .myname{
     align-items: center;
     border-radius: 50%;
     background-color: #8312D3;
+    border: 2px solid black;
 }
 
 .select-suit img{
@@ -455,7 +458,7 @@ header .myname{
     align-items: center;
     border-radius: 50%;
     background-color: #8312D3;
-
+    border: 2px solid black;
 }
 
 .randomize-cards img{
@@ -469,5 +472,6 @@ header .myname{
     border-radius: 10px;
     font-family: 'Young Serif', serif;
     font-size: 2rem;
+    border: 2px solid black;
 }
 
