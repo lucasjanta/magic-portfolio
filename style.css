@@ -1,20 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: 'Young Serif', serif;
+    font-weight: 700;
     overflow-x: hidden;
 }
 
 header {
     display: flex;
     position: fixed;
-    margin-top: 25px;
+    height: 10vh;
+    align-items: center;
     width: 100%;
 }
 
@@ -90,7 +95,7 @@ header .myname{
     width: auto;
     height: fit-content;
     background-color: #8312D3;
-    padding: 0 30px 0 20px;
+    padding: 10px 30px 10px 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -106,11 +111,10 @@ header .myname{
     flex-direction: column;
     line-height: 2rem;
     align-items: center;
-    top: 10vh;
+    justify-content: center;
     width: 100%;
-    height: 15vh;
-    margin: 0 auto;
-    
+    height: 18vh;
+    margin-top: 5vh;
     text-wrap: nowrap;
 }
 
@@ -127,8 +131,6 @@ header .myname{
     width: 50px;
     height: 50px;
     background-color: #F0BA00;
-    top: 20px;
-    left: -8px;
     z-index: -2;
     transform: rotate(35deg);
 }
@@ -144,13 +146,17 @@ header .myname{
     font-weight: 700;
 }
 
+.sect1fx{
+    
+}
+
 .creativity-banner{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 200%;
     height: 11vh;
-    margin: 5rem auto 0;
+    margin: 0 auto;
     background-color: #2A2A2A;
     transform: rotate(-4deg) translateX(-50%);
 }
@@ -179,7 +185,7 @@ header .myname{
     font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 0 25px;
+    padding: 25px;
 }
 
 .tech-banner{
@@ -475,3 +481,57 @@ header .myname{
     border: 2px solid black;
 }
 
+
+
+
+
+.title-techs{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 5vh;
+    height: 25vh;
+}
+
+.textdiv3{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text3-first{
+    text-align: center;
+    font-size: 2rem;
+    z-index: 5;
+}
+
+.first-letter-section3{
+    font-size: 3.5rem;
+}
+
+.text3-second{
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    width: 90%;
+}
+
+.circle-form{
+    display: flex;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 2;
+    left: -10px;
+    background-color: #F0BA00;
+}
+
+.techs{
+    
+}
