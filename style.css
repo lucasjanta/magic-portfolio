@@ -313,7 +313,6 @@ header .myname{
     height: 90%;
     margin: auto;
     border-radius: 8px;
-    perspective: 90%; 
     overflow: hidden;
     /* testar valores diferentes para o PERSPECTIVE 🟡*/
 }
@@ -510,6 +509,11 @@ header .myname{
     z-index: 5;
 }
 
+.job-name{
+    text-transform: capitalize;
+    color: #F0BA00;
+}
+
 .first-letter-section3{
     font-size: 3.5rem;
 }
@@ -549,7 +553,6 @@ header .myname{
     align-items: center;
     width: 80%;
     aspect-ratio: 1/1;
-    background-color: #8312D3;
     border-radius: 8px;
 }
 
@@ -560,7 +563,6 @@ header .myname{
     align-items: center;
     width: 80%;
     aspect-ratio: 1/1;
-    background-color: #8312D3;
     border-radius: 8px;
 }
 
@@ -571,7 +573,6 @@ header .myname{
     align-items: center;
     width: 80%;
     aspect-ratio: 1/1;
-    background-color: #8312D3;
     border-radius: 8px;
 }
 
@@ -582,8 +583,61 @@ header .myname{
     align-items: center;
     width: 80%;
     aspect-ratio: 1/1;
-    background-color: #8312D3;
     border-radius: 8px;
+}
+
+.card-tech{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.card-tech:hover{
+    transform: rotateY(180deg);
+}
+
+.front-tech, .back-tech{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-tech{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #8312D3;
+}
+
+.front-tech img{
+    width: 50%;
+    height: auto;
+    display: none;
+}
+
+.front-tech:hover > img{
+    display: flex;
+}
+
+.back-tech{
+    background-color: #2A2A2A;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-tech img{
+    width: 50%;
+    height: auto;
 }
 
 .my-card{
@@ -667,7 +721,8 @@ header .myname{
 }
 
 .tech-area{
-    display: flex;
+    display:flex;
+    align-items: center;
     flex-direction: column;
     width: 90%;
     height: 25%;
@@ -681,14 +736,17 @@ header .myname{
     position: relative;
     color: white;
     background-color: #8312D3;
-    width: 50%;
+    padding: 0 4px;
     border-radius: 8px;
-    padding: 4px;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     top: -15px;
     font-weight: 500;
+}
+
+.title-tech-area p{
+    padding: 2px;
 }
 
 .tech-buttons{
@@ -706,4 +764,11 @@ header .myname{
     border-radius: 50%;
     background-color: #8312D3;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spell-active{
+    background-color: #F0BA00;
 }
