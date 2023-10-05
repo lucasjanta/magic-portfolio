@@ -778,22 +778,32 @@ header .myname{
 .title-get-in-touch{
     display: flex;
     flex-direction: column;
-    position: relative;
     align-items: center;
     justify-content: center;
     color: white;
     width: 100%;
-    height: 25vh;
+    margin-top: 5vh;
+    height: 14vh;
 }
 
 .text-div-4{
-    position: relative;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    margin: 0 auto;
+    width: auto;
+}
+
+.pentagon-form{
+    display: flex;
+    position: absolute;
+	width: 67px;
+	height: 60px;
+	background-color: #8312D3;
+	clip-path: polygon( 50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+    z-index: 2;
+    left: -10px;
 }
 
 .text-4{
@@ -806,12 +816,149 @@ header .myname{
     color: #F0BA00;
 }
 
-.pentagon-form{
-    position: absolute;
-	width: 77px;
-	height: 70px;
-	background-color: #8312D3;
-	clip-path: polygon( 50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
-    z-index: 2;
-    left: 0px;
+.paragraph-call{
+    display: flex;
+    width: 100%;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 1.20rem;
+    font-weight: 500;
 }
+
+.paragraph-call p{
+    padding: 0 2rem;
+}
+
+.container-form-get-in-touch{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 10vh;
+}
+
+.card-letter{
+    display: flex;
+    position: relative;
+    height: 85%;
+    width: 75%;
+    background-color: #F0BA00;
+    border-radius: 8px;
+    align-items: center;
+    
+}
+
+.card-letter form{
+    display: flex;
+    flex-direction: column;
+    /* modify justify-content  🟡*/
+    justify-content: space-around;
+    align-items: baseline;
+    width: 85%;
+    height: 80%;
+    z-index: 10;
+    margin: 7.5% auto auto;
+}
+
+.card-letter form div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.div-name{
+    width: 80%;
+}
+
+.div-email{
+    width: 100%;
+}
+
+.div-message{
+    width: 100%;
+    height: 40%;
+}
+
+.input-name{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: #2A2A2A;
+    color: white;
+    padding: 10px;
+    font-family: 'Young Serif', serif;;
+}
+
+.input-email{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: #2A2A2A;
+    color: white;
+    padding: 10px;
+    font-family: 'Young Serif', serif;;
+}
+
+.input-message{
+    width: 100%;
+    height: 80%;
+    border-radius: 8px;
+    border: none;
+    background-color: #2A2A2A;
+    color: white;
+    resize: none;
+    padding: 10px;
+    font-family: 'Young Serif', serif;;
+
+}
+
+.pomba{
+    display: flex;
+    position: absolute;
+    width: 80px;
+    right: -20px;
+    top: -40px;
+    z-index: 20;
+}
+
+.star-letter{
+    display: flex;
+    position: absolute;
+    right: 0px;
+    top: 10%;
+    z-index: 2;
+}
+
+.last-button{
+    display: flex;
+    position: absolute;
+    z-index: 20;
+    bottom: -20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-send-email{
+    width: 50%;
+    height: 50px;
+    border-radius: 16px;
+    background-color: #8312D3;
+    border: none;
+    font-family: 'Young-serif', serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: white;
+}
+
+
+
+
+
