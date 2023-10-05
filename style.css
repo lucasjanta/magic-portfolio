@@ -772,3 +772,46 @@ header .myname{
 .spell-active{
     background-color: #F0BA00;
 }
+
+/* arrumar daqui pra baixo */
+
+.title-get-in-touch{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 25vh;
+}
+
+.text-div-4{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.text-4{
+    font-size: 2rem;
+    z-index: 4;
+}
+
+.text-4 span{
+    font-size: 4rem;
+    color: #F0BA00;
+}
+
+.pentagon-form{
+    position: absolute;
+	width: 77px;
+	height: 70px;
+	background-color: #8312D3;
+	clip-path: polygon( 50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+    z-index: 2;
+    left: 0px;
+}
