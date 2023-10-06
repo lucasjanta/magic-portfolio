@@ -47,7 +47,7 @@ A static view of a mini-game that will show the projects in my portfolio
 ### Third Section
 Technologies that I use to build my websites
 <br/>
-![image](https://github.com/lucasjanta/magic-portfolio/assets/6317729/633e4dd2-45ab-4493-9c09-a56a11bbff0f)
+![image](https://github.com/lucasjanta/magic-portfolio/assets/6317729/f5982ba1-f06f-4540-9654-496668bcfe32)
 
 ### Fourth Section
 Form for the user to get in touch with me
