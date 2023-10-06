@@ -947,6 +947,9 @@ header .myname{
 }
 
 .button-send-email{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 50%;
     height: 50px;
     border-radius: 16px;
@@ -954,8 +957,17 @@ header .myname{
     border: none;
     font-family: 'Young-serif', serif;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: white;
+    
+}
+
+.button-send-email img{
+    margin-left: 20px;
+}
+
+.button-send-email p{
+    margin: 0 auto;
 }
 
 
