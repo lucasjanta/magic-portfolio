@@ -8,8 +8,8 @@ On this website, I share my projects, skills, and information about myself. Feel
 - [x] Figma Design
 - [x] HTML + CSS Page 1
 - [x] HTML + CSS Page 2
-- [ ] HTML + CSS Page 3
-- [ ] HTML + CSS Page 4
+- [x] HTML + CSS Page 3
+- [x] HTML + CSS Page 4
 - [ ] All Javascript
 - [ ] Desktop Version
 - [ ] Final Touches
@@ -44,4 +44,12 @@ A static view of a mini-game that will show the projects in my portfolio
 <br/>
 ![image](https://github.com/lucasjanta/magic-portfolio/assets/6317729/f395c3b2-2d4a-4047-9157-86ca75f70448)
 
+### Third Section
+Technologies that I use to build my websites
+<br/>
+![image](https://github.com/lucasjanta/magic-portfolio/assets/6317729/f5982ba1-f06f-4540-9654-496668bcfe32)
 
+### Fourth Section
+Form for the user to get in touch with me
+<br/>
+![image](https://github.com/lucasjanta/magic-portfolio/assets/6317729/b355e72f-5eaa-4a1b-9143-aa8fb349cb55)
