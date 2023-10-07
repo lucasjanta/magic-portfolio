@@ -7,11 +7,23 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to(".creativity-text p", {
     scrollTrigger: {
         trigger: ".creativity-text p",
-        start: "top 15%",
+        /* start: "top 15%",
         end: "bottom 100px",
         markers: true,
-        toggleActions: "restart pause reverse pause",
+        toggleActions: "restart pause reverse pause", */
     },
-    x: 400,
+    x: 270,
     duration: 4
+})
+
+gsap.to(".tech-text", {
+    scrollTrigger: {
+        trigger: ".creativity-text p",
+        /* start: "top 15%",
+        end: "bottom 100px",
+        markers: true,
+        toggleActions: "restart pause reverse pause", */
+    },
+    x: -300,
+    duration: 4.8
 })
