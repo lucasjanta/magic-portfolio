@@ -36,14 +36,29 @@ header .myname{
     align-items: center;
 }
 
+.selected-section{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 25%;
+    border-radius: 50%;
+    background-color: #F0BA00;
+    left: 0%;
+    z-index: -1;
+    transition: left 500ms;
+}
+
 .menubar {
     display: flex;
+    position: relative;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.3);
     width: fit-content;
     padding: 10px;
     border-radius: 50px;
     border: 2px solid #2A2A2A;
+    justify-content: center;
+    z-index: -2;
 }
 
 .menubar ul{
@@ -98,6 +113,7 @@ header .myname{
     padding: 10px 30px 10px 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    
 }
 
 .section-names p{
@@ -127,7 +143,7 @@ header .myname{
     position: absolute;
     width: 45px;
     height: 45px;
-    background-color: #F0BA00;
+    background-color: #f0ba00;
     z-index: -2;
     transform: rotate(35deg);
     left: 5px;
@@ -167,6 +183,8 @@ header .myname{
     color: #8312D3;
     font-weight: 700;
     font-size: 3rem;
+    transition: transform 2500ms;
+    transform: translateX(-16.2%);
 }
 
 .meets-banner{
@@ -205,6 +223,8 @@ header .myname{
     color: #F0BA00;
     font-weight: 700;
     font-size: 3rem;
+    transition: transform 3000ms;
+    transform: translateX(19%);
 }
 
 .text-home{
