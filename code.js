@@ -4,6 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 // start: "top << (relates to the trigger) center << (relates to the screen viewport)" 🟢
 // you can use top/center/bottom or pixels/percentages (relative to top of the trigger) 🟢
 // https://greensock.com/scrolltrigger/ keep watching 🔴
+/* const timelinefirst = gsap.timeline(); */
 /* gsap.to(".creativity-text p", {
     scrollTrigger: {
         trigger: ".creativity-text p",
