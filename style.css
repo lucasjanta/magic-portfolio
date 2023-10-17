@@ -148,6 +148,7 @@ header .myname{
     transform: rotate(35deg);
     left: 5px;
     top: 5px;
+    
 }
 
 .first-title span{
@@ -160,10 +161,6 @@ header .myname{
     font-size: 1.4rem;
     font-weight: 700;
     text-align: center;
-}
-
-.sect1fx{
-    
 }
 
 .creativity-banner{
@@ -183,8 +180,8 @@ header .myname{
     color: #8312D3;
     font-weight: 700;
     font-size: 3rem;
-    transition: transform 2500ms;
-    transform: translateX(-16.2%);
+    /* transition: transform 2500ms;
+    transform: translateX(-16.2%); */
 }
 
 .meets-banner{
@@ -223,8 +220,8 @@ header .myname{
     color: #F0BA00;
     font-weight: 700;
     font-size: 3rem;
-    transition: transform 3000ms;
-    transform: translateX(19%);
+    /* transition: transform 3000ms;
+    transform: translateX(19%); */
 }
 
 .text-home{
@@ -989,8 +986,3 @@ header .myname{
 .button-send-email p{
     margin: 0 auto;
 }
-
-
-
-
-

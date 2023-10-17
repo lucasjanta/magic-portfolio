@@ -5,21 +5,18 @@ gsap.registerPlugin(ScrollTrigger);
 // you can use top/center/bottom or pixels/percentages (relative to top of the trigger) 🟢
 // https://greensock.com/scrolltrigger/ keep watching 🔴
 /* const timelinefirst = gsap.timeline(); */
-/* gsap.to(".creativity-text p", {
-    scrollTrigger: {
-        trigger: ".creativity-text p",
-    },
-    x: 200,
-    duration: 2.5
-})
-gsap.to(".tech-text", {
-    scrollTrigger: {
-        trigger: ".creativity-text p",
-    },
-    x: -340,
+window.onload = function(){
+  gsap.to(".creativity-text", {
+    
+    x: -490,
     duration: 3
 })
- */
+gsap.to(".tech-text", {
+    x: 470,
+    duration: 3
+})
+}
+
 gsap.to(".creativity-text p", {
     scrollTrigger: {
         scrub: true
