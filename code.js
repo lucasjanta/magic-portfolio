@@ -123,6 +123,7 @@ function animateFormsTitle(forma){
             rotation: 180,
             duration: 2.5,
         }).to(forma, {
+            y: -5,
             rotation: 0,
             duration: 1
         })
@@ -130,7 +131,7 @@ function animateFormsTitle(forma){
   if (forma == ".circle-form"){
     var tml = gsap.timeline();
         tml.to(forma, {
-            x: 25,
+            x: 20,
             y: 10,
             scale: 1.3,
             duration: 2.5,
