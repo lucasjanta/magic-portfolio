@@ -6,15 +6,19 @@ gsap.registerPlugin(ScrollTrigger);
 // https://greensock.com/scrolltrigger/ keep watching 🔴
 /* const timelinefirst = gsap.timeline(); */
 window.onload = function(){
+  firstAnimation();
+}
+
+function firstAnimation(){
   gsap.to(".creativity-text", {
-    
-    x: -490,
-    duration: 3
-})
-gsap.to(".tech-text", {
-    x: 470,
-    duration: 3
-})
+      
+      x: -490,
+      duration: 3
+  })
+  gsap.to(".tech-text", {
+      x: 470,
+      duration: 3
+  })
 }
 
 gsap.to(".creativity-text p", {
@@ -32,7 +36,6 @@ gsap.to(".tech-text p", {
 })
 
 const selected = document.querySelector(".selected-section")
-const body = document.querySelector(".body-class")
 const sectionNamesContainer = document.querySelector(".section-names");
 const sectionNames = document.querySelectorAll(".section-names p");
 //get the height of the seen screen
@@ -90,12 +93,64 @@ function changeSectionName(sectionid) {
     if (sectionid == "section1") {
         //animate sectionNameContainer with gsap
         gsapheader("#8312D3", "Home", 'white');
+        animateFormsTitle(".title-box");
     } else if (sectionid == "section2") {
         gsapheader("#f0ba00", "Projects", 'black');
+        animateFormsTitle(".title-triangle");
     } else if (sectionid == "section3") {
         gsapheader("#8312D3", "About Me", 'white');
+        animateFormsTitle(".circle-form");
     } else if (sectionid == "section4") {
         gsapheader("#f0ba00", "Get in Touch", 'black');
+        animateFormsTitle(".pentagon-form");
     }
 }
 
+function animateFormsTitle(forma){
+  if (forma == ".title-box"){
+    var tml = gsap.timeline();
+        tml.to(forma, {
+            rotation: 305,
+            duration: 2.5,
+        }).to(forma, {
+            rotation: 45,
+            duration: 1
+        })
+    }
+  if (forma == ".title-triangle"){
+    var tml = gsap.timeline();
+        tml.to(forma, {
+            rotation: 180,
+            duration: 2.5,
+        }).to(forma, {
+            rotation: 0,
+            duration: 1
+        })
+    }
+  if (forma == ".circle-form"){
+    var tml = gsap.timeline();
+        tml.to(forma, {
+            x: 25,
+            y: 10,
+            scale: 1.3,
+            duration: 2.5,
+        }).to(forma, {
+            x: 0,
+            scale: 1,
+            duration: 1
+        })
+    }
+  if (forma == ".pentagon-form"){
+    var tml = gsap.timeline();
+        tml.to(forma, {
+            rotation: 180,
+            scale: 1.25,
+            duration: 2.5,
+        }).to(forma, {
+            rotation: 0,
+            scale: 1,
+            duration: 1
+        })
+    }
+
+}
