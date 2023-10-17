@@ -334,10 +334,10 @@ header .myname{
     /* testar valores diferentes para o PERSPECTIVE 🟡*/
 }
 
-.container:hover > .card {
+/* .container:hover > .card {
     cursor: pointer;
     transform: rotateY(180deg);
-  }
+  } */
 
 .card{
     position: relative;
@@ -347,6 +347,9 @@ header .myname{
     transform-style: preserve-3d;
 }
 
+.selected{
+    border: 5px solid #F0BA00;
+}
 
 .front,.back{
     height: 100%;
@@ -441,11 +444,6 @@ header .myname{
     justify-content: center;
     align-items: center;
 }
-
-.card1:hover > .frontc1{
-    transform: rotateY(180deg);
-}
-
 
 .botoesgame{
     display: flex;

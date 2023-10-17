@@ -136,7 +136,7 @@ function animateFormsTitle(forma){
             scale: 1.3,
             duration: 2.5,
         }).to(forma, {
-            x: 0,
+            x: 10,
             scale: 1,
             duration: 1
         })
@@ -155,3 +155,18 @@ function animateFormsTitle(forma){
     }
 
 }
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      if (card.classList.contains("selected")) {
+        card.classList.remove("selected");
+      } else{
+        cards.forEach((card) => {
+          card.classList.remove("selected");
+      });
+        card.classList.add("selected");
+      }
+    });
+});
