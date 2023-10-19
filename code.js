@@ -170,3 +170,11 @@ cards.forEach((card) => {
       }
     });
 });
+
+
+const projects = document.querySelectorAll(".project");
+
+projects[0].classList.add("selected-card");
+function getSelectedProject(){
+  
+}

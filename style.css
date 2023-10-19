@@ -300,7 +300,7 @@ header .myname{
     width: 0px;
     height: 0px;
     position: relative;
-    left: -82px;
+    left: -58px;
     z-index: 2;
 }
 
@@ -317,186 +317,41 @@ header .myname{
     font-size: 4.2rem;
 }
 
-.cardsection{
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    width: 90%;
-    height: 60vh;
-    margin: 0 auto;
-}
-
-.container{
-    width: 90%;
-    height: 90%;
-    margin: auto;
-    border-radius: 8px;
-    overflow: hidden;
-    /* testar valores diferentes para o PERSPECTIVE 🟡*/
-}
-
-/* .container:hover > .card {
-    cursor: pointer;
-    transform: rotateY(180deg);
-  } */
-
-.card{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    transition: transform 1500ms;
-    transform-style: preserve-3d;
-}
-
-.selected{
-    border: 5px solid #F0BA00;
-}
-
-.front,.back{
-    height: 100%;
-    width: 100%;
+.projects-slider-container{
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
-    position: absolute;
-    backface-visibility: hidden;
+    height: 70vh;
+    position: relative;
 }
 
-.front{
-    background: #8312D3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.title-and-suit{
+.cards-slider{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    width: 90%;
-    margin: 3px auto 0;
+    height: 75%;
+    position: relative;
 }
-
-.title-card{
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.cardsuit{
+.project{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 18px;
-    padding: 3px;
-    border: 1px solid #2A2A2A;
-    border-radius: 50%;
-
-}
-
-.cardsuit img{
-    display: flex;
-    width: 75%;
-    text-align: center;
-}
-
-.project-image{
-    width: 90%;
-    height: 40%;
-    background-color: #2A2A2A;
-    margin: 0 auto;
-    border-radius: 8px;
-}
-
-.project-description{
-    width: 90%;
-    height: 20%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.project-description p{
-    font-size: 0.5rem;
-}
-
-.project-buttons{
-    display: flex;
-    width: 90%;
-    justify-content: space-evenly;
-    margin: auto;
-}
-
-.project-buttons button{
-    width: 40%;
-    border: 1px solid #2A2A2A;
-    border-radius: 20px;
-    background-color: transparent;
-    font-family: 'Young Serif', serif;
-    font-weight: 700;
-}
-
-.back{
     background-color: #8312D3;
-    /* width: 100%;
-    height: 100%; */
-    transform: rotateY(180deg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.botoesgame{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 90%;
-    height: 10vh;
-    margin: 0 auto;
-}
-
-.select-suit{
-    display: flex;
-    width: 60px;
-    height: 60px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: #8312D3;
-    border: 2px solid black;
-}
-
-.select-suit img{
-    height: 60%;
-    width: auto;
-}
-
-.randomize-cards{
-    display: flex;
-    width: 60px;
-    height: 60px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: #8312D3;
-    border: 2px solid black;
-}
-
-.randomize-cards img{
-    height: 70%;
-}
-
-.show-card{
-    width: 40%;
+    width: 200px;
     height: 80%;
-    background-color: #F0BA00;
-    border-radius: 10px;
-    font-family: 'Young Serif', serif;
-    font-size: 2rem;
-    border: 2px solid black;
+    border-radius: 8px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-control{
+    display: flex;
+    flex-direction: row;
+    height: 25%;
 }
 
 
-
+.selected-card{
+    
+}
 
 
 .title-techs{
