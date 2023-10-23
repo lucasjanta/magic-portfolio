@@ -317,6 +317,8 @@ header .myname{
     font-size: 4.2rem;
 }
 
+/* PARTE QUE DETERMINA FUNCIONALIDADE DAS CARTAS DE PROJETOS 🟢🟢🟢*/
+
 .projects-slider-container{
     display: flex;
     flex-direction: column;
@@ -332,14 +334,12 @@ header .myname{
     position: relative;
 }
 .project{
-    display: flex;
+    display: none;
     background-color: #8312D3;
     width: 200px;
     height: 80%;
     border-radius: 8px;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .slider-control{
@@ -348,9 +348,30 @@ header .myname{
     height: 25%;
 }
 
+.buttons-slider{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.buttons-slider button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
 
 .selected-card{
-    
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.next-previous{
+    display: flex;
 }
 
 

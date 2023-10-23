@@ -173,8 +173,89 @@ cards.forEach((card) => {
 
 
 const projects = document.querySelectorAll(".project");
+const nextButton = document.querySelector(".next-button");
+const previousButton = document.querySelector(".previous-button");
 
-projects[0].classList.add("selected-card");
-function getSelectedProject(){
-  
+
+console.log(selectedProjectIndex());
+animateProjectTransition(selectedProjectIndex());
+// RETORNA O PROJETO SELECIONADO
+function selectedProjectIndex(){
+  const total = projects.length;
+  for (let i = 0; i < total; i++) {
+    if(projects[i].classList.contains("selected-card")){
+      return i;
+    }
+  }
+};
+
+function gotonext(actualindex){
+  projects[actualindex].classList.remove("selected-card");
+  projects[actualindex + 1].classList.add("selected-card");
 }
+
+function animateProjectTransition(actualindex){
+  const total = projects.length;
+  if(actualindex != total-1 && actualindex != 0){
+      const nextProject = projects[actualindex + 1];
+      const previousProject = projects[actualindex - 1];
+      nextProject.classList.add("next-previous");
+      nextProject.style.right = "-140px";
+      previousProject.classList.add("next-previous");
+      previousProject.style.left = "-140px";
+    } else if(actualindex == 0){
+      const nextProject = projects[1];
+      const previousProject = projects[total-1];
+      nextProject.classList.add("next-previous");
+      nextProject.style.right = "-140px";
+      previousProject.classList.add("next-previous");
+      previousProject.style.left = "-140px";
+    } else if(actualindex == total-1){
+      const nextProject = projects[0];
+      const previousProject = projects[total - 2];
+      nextProject.classList.add("next-previous");
+      nextProject.style.right = "-140px";
+      previousProject.classList.add("next-previous");
+      previousProject.style.left = "-140px";
+    }
+
+  
+
+  /* switch(selectedProject.id){
+    case "project1":
+      projects[3].style.left = "-140px";
+      projects[3].classList.add("next-previous");
+      projects[1].style.right = "-140px";
+      projects[1].classList.add("next-previous");
+      break
+    case "project2":
+      projects[0].style.left = "-140px";
+      projects[0].classList.add("next-previous");
+      projects[2].style.right = "-140px";
+      projects[2].classList.add("next-previous");
+      break
+    case "project3":
+      projects[1].style.left = "-140px";
+      projects[1].classList.add("next-previous");
+      projects[3].style.right = "-140px";
+      projects[3].classList.add("next-previous");
+      break
+    case "project4":
+      projects[2].style.left = "-140px";
+      projects[2].classList.add("next-previous");
+      projects[0].style.right = "-140px";
+      projects[0].classList.add("next-previous");
+      break
+  } */
+}
+
+nextButton.addEventListener("click", () => {
+  animateProjectTransition(selectedProjectIndex());
+  gotonext(selectedProjectIndex());
+  
+});
+
+previousButton.addEventListener("click", () => {
+  
+  getSelectedProject();
+});
