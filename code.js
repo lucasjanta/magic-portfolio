@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, Flip);
 
 //toggleActions options: play pause resume reverse restart reset complete none 🟢
 // start: "top << (relates to the trigger) center << (relates to the screen viewport)" 🟢
@@ -188,45 +188,85 @@ function selectedProjectIndex(){
   }
 };
 
-function animateProjects(selectedIndex){
-  if (selectedIndex != 3 && selectedIndex != 0){
-    projects[selectedIndex-1].style.left = (projects[selectedIndex].offsetLeft - 50) + "px";
-    projects[selectedIndex + 1].style.right = (projects[selectedIndex].offsetLeft - 50) + "px";
-  } else if (selectedIndex == 3){
-    projects[0].style.left = (projects[selectedIndex].offsetLeft - 50) + "px";
-    projects[2].style.right = (projects[selectedIndex].offsetLeft - 50) + "px";
-  } else {
-    projects[3].style.left = (projects[selectedIndex].offsetLeft - 150) + "px";
-    projects[1].style.right = (projects[selectedIndex].offsetLeft - 50) + "px";
-  }
-}
-
 function gotonext(actualindex){
-  if (actualindex < 3) {
-    projects[actualindex].classList.remove("selected-card");
-    projects[actualindex + 1].classList.add("selected-card");
-  } else {
-    projects[actualindex].classList.remove("selected-card");
-    projects[0].classList.add("selected-card");
+  if (actualindex == 0) {
+    const state = Flip.getState(".project");
+    projects[0].classList.replace("selected-card", "previous-card");
+    projects[1].classList.replace("next-card", "selected-card");
+    projects[2].classList.replace("hidden-card", "next-card");
+    projects[3].classList.replace("previous-card", "hidden-card");
+    Flip.from(state, {
+  duration: 0.5,
+  absolute: true,
+
+});
+  } else if(actualindex == 1) {
+    const state = Flip.getState(".project2, .project3, .project1");
+    projects[1].classList.replace("selected-card", "previous-card");
+    projects[2].classList.replace("next-card", "selected-card");
+    projects[3].classList.replace("hidden-card", "next-card");
+    projects[0].classList.replace("previous-card", "hidden-card");
+    Flip.from(state, {
+  duration: 0.5,
+  ease: "power1.inOut",
+  absolute: true
+});
+  } else if (actualindex == 2) {
+    const state = Flip.getState(".project3, .project4, .project2");
+    projects[2].classList.replace("selected-card", "previous-card");
+    projects[3].classList.replace("next-card", "selected-card");
+    projects[0].classList.replace("hidden-card", "next-card");
+    projects[1].classList.replace("previous-card", "hidden-card");
+    Flip.from(state, {
+  duration: 0.5,
+  ease: "power1.inOut",
+  absolute: true
+});
+  } else if (actualindex == 3) {
+    const state = Flip.getState(".project4, .project1, .project3");
+    projects[3].classList.replace("selected-card", "previous-card");
+    projects[0].classList.replace("next-card", "selected-card");
+    projects[1].classList.replace("hidden-card", "next-card");
+    projects[2].classList.replace("previous-card", "hidden-card");
+    Flip.from(state, {
+  duration: 0.5,
+  ease: "power1.inOut",
+  absolute: true
+});
   }
 }
 
 function gotoprevious(actualindex){
-  if (actualindex > 0) {
-    projects[actualindex].classList.remove("selected-card");
-    projects[actualindex - 1].classList.add("selected-card");
-  } else {
-    projects[actualindex].classList.remove("selected-card");
-    projects[3].classList.add("selected-card");
+  if (actualindex == 0) {
+    projects[0].classList.replace("selected-card", "next-card");
+    projects[1].classList.replace("next-card", "hidden-card");
+    projects[2].classList.replace("hidden-card", "previous-card");
+    projects[3].classList.replace("previous-card", "selected-card");
+  } else if(actualindex == 1) {
+    projects[1].classList.replace("selected-card", "next-card");
+    projects[2].classList.replace("next-card", "hidden-card");
+    projects[3].classList.replace("hidden-card", "previous-card");
+    projects[0].classList.replace("previous-card", "selected-card");
+  } else if (actualindex == 2) {
+    projects[2].classList.replace("selected-card", "next-card");
+    projects[3].classList.replace("next-card", "hidden-card");
+    projects[0].classList.replace("hidden-card", "previous-card");
+    projects[1].classList.replace("previous-card", "selected-card");
+  } else if (actualindex == 3) {
+    projects[3].classList.replace("selected-card", "next-card");
+    projects[0].classList.replace("next-card", "hidden-card");
+    projects[1].classList.replace("hidden-card", "previous-card");
+    projects[2].classList.replace("previous-card", "selected-card");
   }
 }
 
 
+
 nextButton.addEventListener("click", () => {
   gotonext(selectedProjectIndex());
-  animateProjects(selectedProjectIndex());
 });
 
 previousButton.addEventListener("click", () => {
   gotoprevious(selectedProjectIndex());
+  
 });

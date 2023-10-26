@@ -387,6 +387,24 @@ header .myname{
     transform: translateX(-50%);
 }
 
+.next-card{
+    display: flex;
+    right: -120px;
+    transform: scale(0.75);
+}
+
+.previous-card{
+    display: flex;
+    left: -120px;
+    transform: scale(0.75);
+}
+
+.hidden-card{
+    display: none;
+    transform: scale(0.75);
+    
+}
+
 .next-previous{
     display: flex;
 }
