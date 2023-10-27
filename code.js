@@ -156,25 +156,10 @@ function animateFormsTitle(forma){
 
 }
 
-const cards = document.querySelectorAll(".card");
-
-cards.forEach((card) => {
-    card.addEventListener("click", () => {
-      if (card.classList.contains("selected")) {
-        card.classList.remove("selected");
-      } else{
-        cards.forEach((card) => {
-          card.classList.remove("selected");
-      });
-        card.classList.add("selected");
-      }
-    });
-});
-
-
 const projects = document.querySelectorAll(".project");
 const nextButton = document.querySelector(".next-button");
 const previousButton = document.querySelector(".previous-button");
+
 
 // existem 4 cards: projects[0], projects[1], projects[2], projects[3]
 
@@ -190,49 +175,25 @@ function selectedProjectIndex(){
 
 function gotonext(actualindex){
   if (actualindex == 0) {
-    const state = Flip.getState(".project");
     projects[0].classList.replace("selected-card", "previous-card");
     projects[1].classList.replace("next-card", "selected-card");
     projects[2].classList.replace("hidden-card", "next-card");
     projects[3].classList.replace("previous-card", "hidden-card");
-    Flip.from(state, {
-  duration: 0.5,
-  absolute: true,
-
-});
   } else if(actualindex == 1) {
-    const state = Flip.getState(".project2, .project3, .project1");
     projects[1].classList.replace("selected-card", "previous-card");
     projects[2].classList.replace("next-card", "selected-card");
     projects[3].classList.replace("hidden-card", "next-card");
     projects[0].classList.replace("previous-card", "hidden-card");
-    Flip.from(state, {
-  duration: 0.5,
-  ease: "power1.inOut",
-  absolute: true
-});
   } else if (actualindex == 2) {
-    const state = Flip.getState(".project3, .project4, .project2");
     projects[2].classList.replace("selected-card", "previous-card");
     projects[3].classList.replace("next-card", "selected-card");
     projects[0].classList.replace("hidden-card", "next-card");
     projects[1].classList.replace("previous-card", "hidden-card");
-    Flip.from(state, {
-  duration: 0.5,
-  ease: "power1.inOut",
-  absolute: true
-});
   } else if (actualindex == 3) {
-    const state = Flip.getState(".project4, .project1, .project3");
     projects[3].classList.replace("selected-card", "previous-card");
     projects[0].classList.replace("next-card", "selected-card");
     projects[1].classList.replace("hidden-card", "next-card");
     projects[2].classList.replace("previous-card", "hidden-card");
-    Flip.from(state, {
-  duration: 0.5,
-  ease: "power1.inOut",
-  absolute: true
-});
   }
 }
 
@@ -270,3 +231,12 @@ previousButton.addEventListener("click", () => {
   gotoprevious(selectedProjectIndex());
   
 });
+
+
+//Flip usage
+
+/* const state = Flip.getState(".project");
+Flip.from(state, {
+  duration: 0.5,
+  absolute: true,
+}); */

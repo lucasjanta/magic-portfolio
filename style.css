@@ -405,10 +405,14 @@ header .myname{
     
 }
 
-.next-previous{
+.previous-button, .next-button{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8312D3;
+    border: 2px solid black;
+    border-radius: 8px;
 }
-
 
 .title-techs{
     display: flex;
