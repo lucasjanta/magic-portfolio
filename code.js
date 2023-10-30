@@ -242,9 +242,20 @@ Flip.from(state, {
 }); */
 
 const buttonsoncards = document.querySelectorAll(".button-spell");
+const techcards = document.querySelectorAll(".card-tech");
 const backtechs = document.querySelectorAll(".back-tech img");
 
 function toggleSpells(index){
+  var tmlspells = gsap.timeline();
+        tmlspells.to(techcards, {
+            rotation: 0,
+            scale: 1.25,
+            duration: 0.5
+        }).to(techcards, {
+            rotation: 360,
+            scale: 1,
+            duration: 0.5
+        })
   if(index == 0){
     buttonsoncards[0].classList.add("spell-active");
     buttonsoncards[1].classList.remove("spell-active");
