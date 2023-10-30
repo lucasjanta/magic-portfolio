@@ -557,16 +557,6 @@ header .myname{
     background-color: #8312D3;
 }
 
-.front-tech img{
-    width: 50%;
-    height: auto;
-    display: none;
-}
-
-.front-tech:hover > img{
-    display: flex;
-}
-
 .back-tech{
     background-color: #2A2A2A;
     transform: rotateY(180deg);
