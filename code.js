@@ -240,3 +240,32 @@ Flip.from(state, {
   duration: 0.5,
   absolute: true,
 }); */
+
+const buttonsoncards = document.querySelectorAll(".button-spell");
+const backtechs = document.querySelectorAll(".back-tech img");
+
+function toggleSpells(index){
+  if(index == 0){
+    buttonsoncards[0].classList.add("spell-active");
+    buttonsoncards[1].classList.remove("spell-active");
+    buttonsoncards[2].classList.remove("spell-active");
+    changeTechs("webdev");
+  } else if(index == 1){
+    buttonsoncards[0].classList.remove("spell-active");
+    buttonsoncards[1].classList.add("spell-active");
+    buttonsoncards[2].classList.remove("spell-active");
+    changeTechs("design");
+  } else if(index == 2){
+    buttonsoncards[0].classList.remove("spell-active");
+    buttonsoncards[1].classList.remove("spell-active");
+    buttonsoncards[2].classList.add("spell-active");
+    changeTechs("gamedev");
+  }
+  
+}
+
+function changeTechs(tech){
+  for(let i = 0; i < backtechs.length; i++){
+  backtechs[i].src = `./images/techs/${tech}/${i}.png`;
+}
+}
