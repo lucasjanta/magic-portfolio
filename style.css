@@ -381,6 +381,16 @@ header .myname{
     padding: 10px;
 }
 
+.buttons-slider button img{
+    width: 8vw;
+}
+
+.mid-buttons{
+    background-color: #8312D3;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
 .selected-card{
     display: flex;
     left: 50%;
