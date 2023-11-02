@@ -534,9 +534,13 @@ header .myname{
     transform-style: preserve-3d;
 }
 
-.card-tech:hover{
+.flip-card{
     transform: rotateY(180deg);
 }
+
+/* .card-tech:hover{
+    transform: rotateY(180deg);
+} */
 
 .front-tech, .back-tech{
     height: 100%;

@@ -247,16 +247,14 @@ const backtechs = document.querySelectorAll(".back-tech img");
 
 techcards.forEach(card => {
   card.addEventListener("click", () => {
-    card.style.transform = "rotateY(180deg)";
+    console.log("click");
+    card.classList.toggle("flip-card");
   });
 })
 function toggleSpells(index){
-  var tmlspells = gsap.timeline();
-        tmlspells.to(techcards, {
-            rotation: 360,
-            scale: 1,
-            duration: 0.5
-        })
+  for (let i = 0; i < techcards.length; i++) {
+    techcards[i].classList.remove("flip-card");
+  }
   if(index == 0){
     buttonsoncards[0].classList.add("spell-active");
     buttonsoncards[1].classList.remove("spell-active");
@@ -277,7 +275,10 @@ function toggleSpells(index){
 }
 
 function changeTechs(tech){
-  for(let i = 0; i < backtechs.length; i++){
-  backtechs[i].src = `./images/techs/${tech}/${i}.png`;
-}
+  setTimeout(() => {
+    for(let i = 0; i < backtechs.length; i++){
+      backtechs[i].src = `./images/techs/${tech}/${i}.png`;
+    }
+  },1000);
+  
 }
