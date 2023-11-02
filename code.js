@@ -244,11 +244,14 @@ Flip.from(state, {
 const buttonsoncards = document.querySelectorAll(".button-spell");
 const techcards = document.querySelectorAll(".card-tech");
 const backtechs = document.querySelectorAll(".back-tech img");
+const magehand = document.querySelector("#hand_1");
 
 techcards.forEach(card => {
   card.addEventListener("click", () => {
-    console.log("click");
     card.classList.toggle("flip-card");
+    const abc = card.getBoundingClientRect().x;
+    console.log(abc);
+    magehand.style.transform = `translateX(${abc-300}px)`;
   });
 })
 function toggleSpells(index){
