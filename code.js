@@ -251,7 +251,17 @@ techcards.forEach(card => {
     card.classList.toggle("flip-card");
     const abc = card.getBoundingClientRect().x;
     console.log(abc);
-    magehand.style.transform = `translateX(${abc-300}px)`;
+    
+    //se o clique for no card 1 então rotacionar o magehand
+    if(techcards[0].classList.contains("flip-card")){
+      magehand.style.transform = `translateX(${abc-300}px) translateY(380px) rotateZ(-55deg)`;
+    } else if (techcards[1].classList.contains("flip-card")){
+      magehand.style.transform = `translateX(${abc-400}px) translateY(380px) rotateZ(-45deg)`;
+    } else if (techcards[2].classList.contains("flip-card")){
+      magehand.style.transform = `translateX(${abc-350}px) translateY(150px) rotateZ(-25deg)`;
+    } else if (techcards[3].classList.contains("flip-card")){
+      magehand.style.transform = `translateX(${abc-330}px) translateY(0px) rotateZ(-5deg)`;
+    }
   });
 })
 function toggleSpells(index){
