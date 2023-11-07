@@ -249,18 +249,44 @@ const magehand = document.querySelector("#hand_1");
 techcards.forEach(card => {
   card.addEventListener("click", () => {
     card.classList.toggle("flip-card");
-    const abc = card.getBoundingClientRect().x;
-    console.log(abc);
     
+
+    const cardLeftPosition = card.getBoundingClientRect().left;
     //se o clique for no card 1 então rotacionar o magehand
-    if(techcards[0].classList.contains("flip-card")){
-      magehand.style.transform = `translateX(${abc-300}px) translateY(380px) rotateZ(-55deg)`;
-    } else if (techcards[1].classList.contains("flip-card")){
-      magehand.style.transform = `translateX(${abc-400}px) translateY(380px) rotateZ(-45deg)`;
-    } else if (techcards[2].classList.contains("flip-card")){
-      magehand.style.transform = `translateX(${abc-350}px) translateY(150px) rotateZ(-25deg)`;
-    } else if (techcards[3].classList.contains("flip-card")){
-      magehand.style.transform = `translateX(${abc-330}px) translateY(0px) rotateZ(-5deg)`;
+    if(card == techcards[0]){
+      gsap.to(magehand, {
+        duration: 0.5,
+        x: cardLeftPosition-300
+      })
+    }
+    if(card == techcards[0]){
+      gsap.to(magehand, {
+        duration: 0.5,
+        x: cardLeftPosition-300,
+        y: 30,
+        rotation: -68
+      })
+    } else if (card == techcards[1]){
+      gsap.to(magehand, {
+        duration: 0.5,
+        x: cardLeftPosition-350,
+        y: 0,
+        rotation: -50
+      })
+    } else if (card == techcards[2]){
+      gsap.to(magehand, {
+        duration: 0.5,
+        x: cardLeftPosition-350,
+        y: -50,
+        rotation: -25
+      })
+    } else if (card == techcards[3]){
+      gsap.to(magehand, {
+        duration: 0.5,
+        x: cardLeftPosition-330,
+        y: 0,
+        rotation: -5
+      })
     }
   });
 })
@@ -295,3 +321,4 @@ function changeTechs(tech){
   },1000);
   
 }
+
