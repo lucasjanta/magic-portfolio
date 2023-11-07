@@ -866,8 +866,8 @@ header .myname{
 .star-letter{
     display: flex;
     position: absolute;
-    right: 0px;
-    top: 10%;
+    right: 0;
+    bottom: 0;
     z-index: 2;
 }
 
@@ -877,6 +877,8 @@ header .myname{
     z-index: 20;
     bottom: -20px;
     width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     justify-content: center;
     align-items: center;
 }
