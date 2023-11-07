@@ -38,6 +38,7 @@ gsap.to(".tech-text p", {
 const selected = document.querySelector(".selected-section")
 const sectionNamesContainer = document.querySelector(".section-names");
 const sectionNames = document.querySelectorAll(".section-names p");
+const myname = document.querySelector(".myname");
 //get the height of the seen screen
 //i want to know in what section the user is
 const sections = document.querySelectorAll(".section");
@@ -55,15 +56,19 @@ const observer = new IntersectionObserver((entries) => {
       if (sectionId == "section1") {
         selected.style.left = "0%";
         changeSectionName(sectionId);
+        myname.style.color = "black";
       } else if (sectionId == "section2") {
         selected.style.left = "23.25%";
         changeSectionName(sectionId);
+        myname.style.color = "white";
       } else if (sectionId == "section3") {
         selected.style.left = "49%";
         changeSectionName(sectionId);
+        myname.style.color = "black";
       } else if (sectionId == "section4") {
         selected.style.left = "75%";
         changeSectionName(sectionId);
+        myname.style.color = "white";
       }
       
     }
@@ -245,6 +250,7 @@ const buttonsoncards = document.querySelectorAll(".button-spell");
 const techcards = document.querySelectorAll(".card-tech");
 const backtechs = document.querySelectorAll(".back-tech img");
 const magehand = document.querySelector("#hand_1");
+const mageEyes = document.querySelector("#eyes");
 
 techcards.forEach(card => {
   card.addEventListener("click", () => {
@@ -256,15 +262,14 @@ techcards.forEach(card => {
     if(card == techcards[0]){
       gsap.to(magehand, {
         duration: 0.5,
-        x: cardLeftPosition-300
-      })
-    }
-    if(card == techcards[0]){
-      gsap.to(magehand, {
-        duration: 0.5,
         x: cardLeftPosition-300,
-        y: 30,
+        y: 45,
         rotation: -68
+      })
+      gsap.to(mageEyes, {
+        duration: 0.5,
+        x: -8,
+        y: -3
       })
     } else if (card == techcards[1]){
       gsap.to(magehand, {
@@ -273,6 +278,11 @@ techcards.forEach(card => {
         y: 0,
         rotation: -50
       })
+      gsap.to(mageEyes, {
+        duration: 0.5,
+        x: -4,
+        y: -3
+      })
     } else if (card == techcards[2]){
       gsap.to(magehand, {
         duration: 0.5,
@@ -280,12 +290,22 @@ techcards.forEach(card => {
         y: -50,
         rotation: -25
       })
+      gsap.to(mageEyes, {
+        duration: 0.5,
+        x: 0,
+        y: -5
+      })
     } else if (card == techcards[3]){
       gsap.to(magehand, {
         duration: 0.5,
         x: cardLeftPosition-330,
         y: 0,
         rotation: -5
+      })
+      gsap.to(mageEyes, {
+        duration: 0.5,
+        x: 2,
+        y: 0
       })
     }
   });
