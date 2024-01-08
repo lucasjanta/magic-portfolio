@@ -255,9 +255,13 @@ const mageEyes = document.querySelector("#eyes");
 techcards.forEach(card => {
   card.addEventListener("click", () => {
     card.classList.toggle("flip-card");
-    
-
-    const cardLeftPosition = card.getBoundingClientRect().left;
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 425) {
+      
+    }else if (screenWidth <768 && screenWidth >= 425) {
+      
+    }
+    const cardLeftPosition = card.offsetLeft;
     //se o clique for no card 1 então rotacionar o magehand
     if(card == techcards[0]){
       gsap.to(magehand, {
@@ -308,6 +312,8 @@ techcards.forEach(card => {
         y: 0
       })
     }
+    console.log(cardLeftPosition);
+    console.log(screenWidth);
   });
 })
 function toggleSpells(index){

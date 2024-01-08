@@ -162,6 +162,7 @@ header .myname{
     font-size: 1.4rem;
     font-weight: 700;
     text-align: center;
+    text-wrap: nowrap;
 }
 
 .creativity-banner{
@@ -585,10 +586,10 @@ header .myname{
 
 .mage{
     display: flex;
-    width: 60%;
+    width: 220px;
     position: absolute;
     z-index: 6;
-    left: 52%;
+    left: 50%;
     top: -50px;
     transform: translateX(-50%);
 }
@@ -605,7 +606,7 @@ header .myname{
     margin-top: 10px;
     position: absolute;
     background-color: #2A2A2A;
-    width: 70%;
+    width: 250px;
     height: 42vh;
     z-index: 3;
     left: 50%;
@@ -913,4 +914,16 @@ header .myname{
 
 .button-send-email p{
     margin: 0 auto;
+}
+
+@media screen and (min-width: 425px) {
+    .mage{
+        width: 230px;
+    }
+    .card-black{
+        width: 300px;
+    }
+    .technologies{
+        width: 340px;
+    }
 }
