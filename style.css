@@ -804,7 +804,7 @@ header .myname{
     width: 85%;
     height: 80%;
     z-index: 10;
-    margin: 7.5% auto auto;
+    margin: 5% auto auto;
 }
 
 .card-letter form div{
@@ -998,5 +998,62 @@ header .myname{
         width: 320px;
         height: 90%;
         border-radius: 8px;
+    }
+
+    .technologies{
+        width: 300px;
+    }
+
+    .paragraph-call{
+        display: flex;
+        width: 70%;
+        height: 15vh;
+        margin: 0 auto;
+    }
+
+    .container-form-get-in-touch{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50vh;
+        margin-bottom: 10vh;
+        position: relative;
+    }
+    
+    .card-letter{
+        display: flex;
+        position: relative;
+        height: 95%;
+        width: 60%;
+        background-color: #F0BA00;
+        border-radius: 8px;
+        align-items: center;
+        
+    }
+    
+    .card-letter form{
+        display: flex;
+        flex-direction: column;
+        /* modify justify-content  🟡*/
+        justify-content: space-around;
+        align-items: baseline;
+        width: 85%;
+        height: 80%;
+        z-index: 10;
+        margin: 2.5% auto auto;
+    }
+    
+    .card-letter form div{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .pomba{
+        width: 80px;
+        top: -10px;
+        right: 18%;
     }
 }
