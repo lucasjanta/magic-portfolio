@@ -147,7 +147,7 @@ header .myname{
     background-color: #f0ba00;
     z-index: -2;
     transform: rotate(35deg);
-    left: 5px;
+    left: 10%;
     top: 5px;
     
 }
@@ -155,10 +155,10 @@ header .myname{
 .first-title span{
     position: relative;
     font-size: 3rem;
-    
 }
 
 .first-title{
+    margin: 0 40px;
     font-size: 1.4rem;
     font-weight: 700;
     text-align: center;
@@ -866,7 +866,7 @@ header .myname{
     position: absolute;
     width: 80px;
     top: -10px;
-    right: 25px;
+    right: 10%;
     z-index: 20;
     /* transform: scaleX(-1); */ 
     /* get the transform out by editing the vector */
@@ -916,14 +916,87 @@ header .myname{
     margin: 0 auto;
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 425px) and (max-width: 768px) {
     .mage{
         width: 230px;
     }
     .card-black{
         width: 300px;
+        height: 360px;
     }
     .technologies{
         width: 340px;
+    }
+    .buttons-slider button{
+        width: 60px;
+        height: 60px;
+    }
+    .buttons-slider button img{
+        width: 40px;
+        height: 40px;
+    }
+
+    
+}
+
+@media screen and (min-width: 768px){
+    .first-title{
+        font-size: 1.6rem;
+    }
+    
+    .creativity-banner{
+        height: 14vh;
+        width: 210%;
+        transform: rotate(-3deg) translateX(-50%);
+    }
+
+    .creativity-text{
+        font-size: 4rem;
+    }
+    
+    .meets-banner{
+        margin: 2.9rem auto;
+    }
+    
+    .tech-banner{
+        height: 14vh;
+        transform: rotate(3deg) translateX(-50%);
+    }
+    
+    .tech-text{
+        font-size: 4rem;
+    }
+
+    .text-home{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        
+        margin: auto;
+    }
+    
+    .text-home p{
+        font-size: 3vh;
+        font-weight: 700;
+        padding: 0 20px;
+        
+    }
+
+    .buttons-slider button{
+        width: 60px;
+        height: 60px;
+    }
+    .buttons-slider button img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .project{
+        width: 320px;
+        height: 90%;
+        border-radius: 8px;
     }
 }
