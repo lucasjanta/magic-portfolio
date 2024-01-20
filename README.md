@@ -10,8 +10,8 @@ On this website, I share my projects, skills, and information about myself. Feel
 - [x] HTML + CSS Page 2
 - [x] HTML + CSS Page 3
 - [x] HTML + CSS Page 4
+- [x] Desktop Version
 - [ ] All Javascript
-- [ ] Desktop Version
 - [ ] Final Touches
 
 ## How to Run Locally
@@ -26,6 +26,8 @@ If you want to run this website locally, follow these steps:
 - Figma
 - HTML
 - CSS
+- Javascript
+- GSAP
 
 ## Figma Project 
 All the design was made using Figma and Illustrator.
