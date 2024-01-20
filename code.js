@@ -251,22 +251,27 @@ const techcards = document.querySelectorAll(".card-tech");
 const backtechs = document.querySelectorAll(".back-tech img");
 const magehand = document.querySelector("#hand_1");
 const mageEyes = document.querySelector("#eyes");
+const mage = document.querySelector("#mage");
+
+/* window.onresize */
 
 techcards.forEach(card => {
   card.addEventListener("click", () => {
     card.classList.toggle("flip-card");
     const screenWidth = window.innerWidth;
-    if (screenWidth < 425) {
+    /* if (screenWidth < 425) {
       
     }else if (screenWidth <768 && screenWidth >= 425) {
       
-    }
+    } */
     const cardLeftPosition = card.offsetLeft;
+    const magehandX = magehand.getBoundingClientRect().x;
+    console.log(magehandX);
     //se o clique for no card 1 então rotacionar o magehand
     if(card == techcards[0]){
       gsap.to(magehand, {
         duration: 0.5,
-        x: cardLeftPosition-300,
+        x: -250, //
         y: 45,
         rotation: -68
       })
@@ -275,10 +280,23 @@ techcards.forEach(card => {
         x: -8,
         y: -3
       })
+      gsap.to(magehand, {
+        duration: 0.5,
+        x: 0,
+        y: 0,
+        rotation: 0,
+        delay: 1
+      })
+      gsap.to(mageEyes, {
+        duration: 0.5,
+        x: 0,
+        y: 0,
+        delay: 1
+      })
     } else if (card == techcards[1]){
       gsap.to(magehand, {
         duration: 0.5,
-        x: cardLeftPosition-350,
+        x: -200,
         y: 0,
         rotation: -50
       })
@@ -287,10 +305,23 @@ techcards.forEach(card => {
         x: -4,
         y: -3
       })
+      gsap.to(magehand, {
+        duration: 0.5,
+        x: 0,
+        y: 0,
+        rotation: 0,
+        delay: 1
+      })
+      gsap.to(mageEyes, {
+        duration: 0.5,
+        x: 0,
+        y: 0,
+        delay: 1
+      })
     } else if (card == techcards[2]){
       gsap.to(magehand, {
         duration: 0.5,
-        x: cardLeftPosition-350,
+        x: -150,
         y: -50,
         rotation: -25
       })
@@ -299,10 +330,23 @@ techcards.forEach(card => {
         x: 0,
         y: -5
       })
+      gsap.to(magehand, {
+        duration: 0.5,
+        x: 0,
+        y: 0,
+        rotation: 0,
+        delay: 1
+      })
+      gsap.to(mageEyes, {
+        duration: 0.5,
+        x: 0,
+        y: 0,
+        delay: 1
+      })
     } else if (card == techcards[3]){
       gsap.to(magehand, {
         duration: 0.5,
-        x: cardLeftPosition-330,
+        x: -20,
         y: 0,
         rotation: -5
       })
@@ -310,6 +354,19 @@ techcards.forEach(card => {
         duration: 0.5,
         x: 2,
         y: 0
+      })
+      gsap.to(magehand, {
+        duration: 0.5,
+        x: 0,
+        y: 0,
+        rotation: 0,
+        delay: 1
+      })
+      gsap.to(mageEyes, {
+        duration: 0.5,
+        x: 0,
+        y: 0,
+        delay: 1
       })
     }
     console.log(cardLeftPosition);
@@ -337,6 +394,7 @@ function toggleSpells(index){
     changeTechs("gamedev");
   }
   
+
 }
 
 function changeTechs(tech){
