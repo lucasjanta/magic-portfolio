@@ -916,6 +916,29 @@ header .myname{
     margin: 0 auto;
 }
 
+.yellow-star{
+    position: absolute;
+    z-index: -10;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #F0BA00; /* Altere a cor conforme necessário */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.yellow-star{
+    position: absolute;
+    z-index: 1;
+    background-image: url('images/yellow-star.png');
+}
+
+.purple-star{
+    position: absolute;
+    z-index: 1;
+    background-image: url('images/purple-star.png');
+}
+
 @media screen and (min-width: 425px) and (max-width: 768px) {
     .mage{
         width: 230px;
@@ -1014,5 +1037,17 @@ header .myname{
 
     .pomba{
         right: 18%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .first-title{
+        font-size: 1rem;
+    }
+    .first-title span{
+        font-size: 2.5rem;
+    }
+    .title-box{
+        left: 12%;
     }
 }
